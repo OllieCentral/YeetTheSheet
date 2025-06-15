@@ -5,7 +5,7 @@ import { Id } from '../../convex/_generated/dataModel';
 import { toast } from 'sonner';
 
 const IncomeList: React.FC = () => {
-  const incomeList = useQuery(api.finance.listIncome) ?? [];
+  const incomeList = useQuery(api.finance.listIncome);
   const deleteIncome = useMutation(api.finance.deleteIncome); // Use the new mutation
 
   const handleDelete = async (incomeId: Id<"income">) => {
